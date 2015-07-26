@@ -94,5 +94,5 @@ names(sensor_data_mean_std) <- gsub('Freq\\.',"Frequency.",names(sensor_data_mea
 names(sensor_data_mean_std) <- gsub('Freq$',"Frequency",names(sensor_data_mean_std))
 #######################Final Output######################
 sensor_avg_by_act_sub = ddply(sensor_data_mean_std, c("Subject","Activity"), numcolwise(mean))
-write.table(sensor_avg_by_act_sub, file = "sensor_avg_by_act_sub.txt,row.names=FALSE") # final output, note col.names=false requirement
+write.table(sensor_avg_by_act_sub, file = "sensor_avg_by_act_sub.txt",row.names=FALSE) # final output, note col.names=false requirement
 
